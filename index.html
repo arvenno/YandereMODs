@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>SaikouDock - Descarga Directa de Yandere Simulator Mods</title>
     <meta name="description" content="Bienvenido a SaikouDock. Consigue la descarga directa en un clic de Yandere Simulator juego original y los mejores mods como Love Dive de txmpanii. Creado por Abraham Fernandez.">
     <meta name="keywords" content="saikoudock, yandere mods, yandere simulator mods, descargar yandere simulator rapido, mod love dive, txmpanii, abraham fernandez, descargas directas 1 clic">
@@ -43,6 +42,37 @@
             font-size: 1rem;
         }
 
+        /* BARRA CON EL BOTÓN INTERACTIVO */
+        .barra-navegacion {
+            background-color: #151515;
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border-bottom: 1px solid #222;
+        }
+
+        .btn-toggle-aishis {
+            background: linear-gradient(45deg, #ff69b4, #bc13fe);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-toggle-aishis:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+        }
+
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -57,6 +87,11 @@
             color: #ff69b4;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* OCULTO POR DEFECTO */
+        #seccion-secreta-aishis {
+            display: none;
         }
 
         /* Grid de Descargas */
@@ -108,7 +143,7 @@
         .btn-mod { background-color: #3498db; }
         .btn-mod:hover { background-color: #2980b9; transform: scale(1.02); }
         
-        /* Grid de Personajes en Fila (Imagen al lado del texto) */
+        /* Grid de Personajes */
         .personajes-grid {
             display: flex;
             flex-direction: column;
@@ -159,6 +194,21 @@
             color: #ffffff;
         }
 
+        .footer {
+            background-color: #161616;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #222;
+            color: #666666;
+            font-size: 0.9rem;
+        }
+        .firma {
+            color: #ff69b4;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
         @media (max-width: 600px) {
             .personaje-card {
                 flex-direction: column;
@@ -180,6 +230,12 @@
         <h1>SaikouDock</h1>
         <p>Tu estación de descarga de Yandere Simulator Mods en un clic</p>
     </header>
+
+    <div class="barra-navegacion">
+        <button class="btn-toggle-aishis" onclick="interactuarAishis()">
+            ✨ Revelar Linaje Aishi ✨
+        </button>
+    </div>
 
     <div class="container">
         
@@ -203,33 +259,35 @@
             </div>
         </div>
 
-        <h2 class="seccion-titulo">Personajes Principales</h2>
-        <div class="personajes-grid">
-            
-            <div class="personaje-card">
-                <div class="personaje-img-container">
-                    <img src="Ayano.png.png" alt="Ayano Aishi" class="personaje-img">
-                </div>
-                <div class="personaje-info">
-                    <h3>Ayano Aishi (Modo 202x)</h3>
-                    <div class="personaje-detalles">
-                        <strong>Protagonista principal.</strong> Es una estudiante de instituto conocida como "Yandere-chan" que padece una condición que le impide sentir emociones de forma natural. Al conocer a su "Senpai", experimenta sentimientos intensos por primera vez y desarrolla una obsesión extrema. Está dispuesta a eliminar, sabotear o asesinar a cualquier rival que intente acercarse a él, ocultando sus crímenes bajo una apariencia escolar normal.
+        <div id="seccion-secreta-aishis">
+            <h2 class="seccion-titulo" style="border-color: #bc13fe; color: #bc13fe;">Personajes Principales</h2>
+            <div class="personajes-grid">
+                
+                <div class="personaje-card">
+                    <div class="personaje-img-container">
+                        <img src="Ayano.png.png" alt="Ayano Aishi" class="personaje-img">
+                    </div>
+                    <div class="personaje-info">
+                        <h3>Ayano Aishi (Modo 202x)</h3>
+                        <div class="personaje-detalles">
+                            <strong>Protagonista principal.</strong> Es una estudiante de instituto conocida como "Yandere-chan" que padece una condición que le impide sentir emociones de forma natural. Al conocer a su "Senpai", experimenta sentimientos intensos por primera vez y desarrolla una obsesión extrema. Está dispuesta a eliminar, sabotear o asesinar a cualquier rival que intente acercarse a él, ocultando sus crímenes bajo una apariencia escolar normal.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="personaje-card card-ryoba">
-                <div class="personaje-img-container">
-                    <img src="Ryoba.png.png" alt="Ryoba Aishi" class="personaje-img">
-                </div>
-                <div class="personaje-info">
-                    <h3 class="text-ryoba">Ryoba Aishi (Modo 1980)</h3>
-                    <div class="personaje-detalles">
-                        <strong>Madre de Ayano y protagonista del Modo 1980s.</strong> Comparte exactamente la misma condición emocional que su hija y persiguió a su propio Senpai en el pasado usando métodos letales. A diferencia de Ayano, Ryoba es sumamente hábil actuando de manera alegre, dulce y sociable en público para desviar cualquier sospecha, sirviendo como mentora para guiar a su hija en el control de su obsesión.
+                <div class="personaje-card card-ryoba">
+                    <div class="personaje-img-container">
+                        <img src="Ryoba.png.png" alt="Ryoba Aishi" class="personaje-img">
+                    </div>
+                    <div class="personaje-info">
+                        <h3 class="text-ryoba">Ryoba Aishi (Modo 1980)</h3>
+                        <div class="personaje-detalles">
+                            <strong>Madre de Ayano y protagonista del Modo 1980s.</strong> Comparte exactamente la misma condición emocional que su hija y persiguió a su propio Senpai en el pasado usando métodos letales. A diferencia de Ayano, Ryoba es sumamente hábil actuando de manera alegre, dulce y sociable en público para desviar cualquier sospecha, sirviendo como mentora para guiar a su hija en el control de su obsesión.
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
 
     </div>
@@ -238,6 +296,19 @@
         <p>Este es un sitio web educativo creado por un fan. Todos los derechos del juego pertenecen a YandereDev.</p>
         <p class="firma">Página web hecha por Abraham Fernandez</p>
     </div>
+
+    <script>
+        function interactuarAishis() {
+            var contenedor = document.getElementById("seccion-secreta-aishis");
+            if (contenedor) {
+                if (contenedor.style.display === "none" || contenedor.style.display === "") {
+                    contenedor.style.display = "block";
+                } else {
+                    contenedor.style.display = "none";
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
