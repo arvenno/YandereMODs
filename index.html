@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- CONFIGURACIÓN DE BÚSQUEDA PARA GOOGLE Y EDGE -->
     <title>Yandere MODs - Descargar Yandere Simulator y Mod Love Dive</title>
     <meta name="description" content="Bienvenido a Yandere MODs. Descarga de Yandere Simulator juego original y el popular Mod Love Dive de txmpanii. Creado por Abraham Fernandez.">
     <meta name="keywords" content="yandere mods, yandere simulator mods, descargar yandere simulator, mod love dive, txmpanii, abraham fernandez">
@@ -15,26 +14,52 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a;
+            background-color: #0b0b0b;
             color: #ffffff;
         }
+        
         header {
-            background-color: #ff69b4;
-            padding: 30px 10px;
+            background-color: #161616;
+            background-image: linear-gradient(180deg, #1f1f1f 0%, #111111 100%);
+            padding: 40px 10px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+            border-bottom: 4px solid #ff69b4;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            letter-spacing: 1px;
+            font-size: 3.8rem;
+            color: #ffffff;
+            text-shadow: 0px 0px 12px rgba(255, 105, 180, 0.8), 2px 2px 4px rgba(0,0,0,0.9);
+            letter-spacing: 3px;
+            font-weight: 800;
         }
+        header p {
+            color: #ff69b4;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
+        
+        .seccion-titulo {
+            border-bottom: 2px solid #ff69b4;
+            padding-bottom: 10px;
+            margin: 40px 0 25px 0;
+            font-size: 2rem;
+            color: #ff69b4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Grid de Descargas */
         .descargas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -42,38 +67,26 @@
             margin-bottom: 25px;
         }
         .card {
-            background-color: #262626;
+            background-color: #151515;
             border-left: 5px solid #ff69b4;
             padding: 25px;
             border-radius: 4px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border: 1px solid #222222;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
-        .card-mod {
-            border-left: 5px solid #3498db;
-        }
-        h2 {
-            color: #ff69b4;
-            margin-top: 0;
-        }
-        .card-mod h2 {
-            color: #3498db;
-        }
+        .card-mod { border-left: 5px solid #3498db; }
+        .card-mod h2 { color: #3498db; }
         .autor-tag {
-            background-color: #2a3a4a;
+            background-color: #1f2d3d;
             color: #3498db;
             display: inline-block;
             padding: 4px 8px;
             font-size: 0.85rem;
             font-weight: bold;
             border-radius: 4px;
-            margin-bottom: 10px;
-        }
-        ul, ol {
-            padding-left: 20px;
-        }
-        li {
             margin-bottom: 10px;
         }
         .btn {
@@ -86,34 +99,61 @@
             color: #fff;
             border-radius: 5px;
             margin-top: 15px;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: all 0.2s ease;
             cursor: pointer;
+            text-transform: uppercase;
         }
-        .btn-original {
-            background-color: #ff69b4;
+        .btn-original { background-color: #ff69b4; }
+        .btn-original:hover { background-color: #e0529c; transform: scale(1.02); }
+        .btn-mod { background-color: #3498db; }
+        .btn-mod:hover { background-color: #2980b9; transform: scale(1.02); }
+        
+        /* Grid de Personajes de las Asesinas */
+        .personajes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
         }
-        .btn-original:hover {
-            background-color: #e0529c;
-            transform: scale(1.02);
+        .personaje-card {
+            background-color: #151515;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #252525;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
-        .btn-mod {
-            background-color: #3498db;
+        .personaje-img {
+            width: 100%;
+            height: 400px; /* Imagen más alta tipo póster oficial */
+            object-fit: cover;
+            border-bottom: 4px solid #ff69b4;
         }
-        .btn-mod:hover {
-            background-color: #2980b9;
-            transform: scale(1.02);
+        .card-ryoba .personaje-img {
+            border-bottom: 4px solid #bc13fe;
         }
+        .personaje-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .personaje-info h3 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #ff69b4;
+        }
+        .text-ryoba { color: #bc13fe !important; }
+        
         .footer {
             text-align: center;
             padding: 40px 20px 20px 20px;
-            color: #666;
+            color: #555;
             font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: 60px;
         }
         .firma {
             font-size: 0.75rem;
             color: #444;
             margin-top: 10px;
-            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -121,45 +161,52 @@
 
     <header>
         <h1>Yandere MODs</h1>
-        <p>Centro de Descargas - Fan Site</p>
+        <p>Centro de Descargas Oficial - Fan Site</p>
     </header>
 
     <div class="container">
         
+        <!-- SECCIÓN DE DESCARGAS -->
+        <h2 class="seccion-titulo">Zona de Descarga</h2>
         <div class="descargas-grid">
-            
-            <!-- TARJETA JUEGO ORIGINAL -->
             <div class="card">
                 <div>
                     <h2>Juego Original Completo</h2>
-                    <p>Obtén el juego base oficial comprimido. Incluye la versión más reciente con los dos modos jugables: <strong>Modo 202x</strong> e <strong>Historia de 1980</strong>.</p>
+                    <p>Obtén el juego base oficial comprimido. Incluye la versión más reciente con los dos modos jugables.</p>
                 </div>
-                <!-- ENLACE DE MEDIAFIRE YA CONFIGURADO -->
-                <a href="https://www.mediafire.com/file/viciqzzv01kna3q/YandereSimulator.zip/file" target="_blank" class="btn btn-original">Descargar en Mediafire</a>
+                <a href="https://mediafire.com" target="_blank" class="btn btn-original">Descargar en Mediafire</a>
             </div>
 
-            <!-- TARJETA MOD LOVE DIVE -->
             <div class="card card-mod">
                 <div>
                     <span class="autor-tag">Creado por txmpanii</span>
                     <h2>Mod Love Dive</h2>
-                    <p>Consigue la popular modificación de la comunidad. Instala texturas, peinados y agregados visuales especiales creados por txmpanii.</p>
+                    <p>Consigue la popular modificación visual de texturas y peinados especiales de txmpanii.</p>
                 </div>
-                <!-- ENLACE DE MEGA YA CONFIGURADO -->
-                <a href="https://mega.nz/file/fKQhlSBZ#8LeVElR5LVrNwHtSDxPDjehf5YUwVQJiYDz9qB3-dwI" target="_blank" class="btn btn-mod">Descargar en MEGA</a>
+                <a href="https://mega.nz" target="_blank" class="btn btn-mod">Descargar en MEGA</a>
             </div>
-
         </div>
 
-        <!-- INSTRUCCIONES -->
-        <div class="card">
-            <h2>¿Cómo jugar e instalar el Mod?</h2>
-            <ol>
-                <li>Descarga el <strong>Juego Original</strong> usando el botón rosa y descomprime el archivo ZIP en una carpeta.</li>
-                <li>Descarga los archivos del <strong>Mod Love Dive</strong> usando el botón azul.</li>
-                <li>Copia y pega los archivos del Mod dentro de la carpeta del juego original, reemplazando cuando la computadora te lo pida.</li>
-                <li>Inicia <code>YandereSimulator.exe</code> y ¡a disfrutar!</li>
-            </ol>
+        <!-- SECCIÓN DE PROTAGONISTAS -->
+        <h2 class="seccion-titulo">Personajes Principales</h2>
+        <div class="personajes-grid">
+            
+            <!-- AYANO -->
+            <div class="personaje-card">
+                <img src="https://alphacoders.com" alt="Ayano Aishi" class="personaje-img">
+                <div class="personaje-info">
+                    <h3>Ayano Aishi (Modo 202x)</h3>
+                </div>
+            </div>
+
+            <!-- RYOBA -->
+            <div class="personaje-card card-ryoba">
+                <img src="https://alphacoders.com" alt="Ryoba Aishi" class="personaje-img">
+                <div class="personaje-info">
+                    <h3 class="text-ryoba">Ryoba Aishi (Modo 1980)</h3>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -171,3 +218,11 @@
 
 </body>
 </html>
+    <!-- REEMPLAZA TU CABECERA ACTUAL POR ESTA -->
+    <header>
+        <h1>Yandere MODs</h1>
+        <p>Centro de Descargas Oficial - Fan Site</p>
+        <!-- Texto corto de la versión actual del juego -->
+        <p style="color: #888888; font-size: 0.85rem; margin-top: 5px; text-shadow: none;">Última actualización: May 15th, 2026</p>
+    </header>
+
